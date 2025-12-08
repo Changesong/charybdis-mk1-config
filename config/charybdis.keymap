@@ -43,21 +43,21 @@
         QWERTY {
             bindings = <
 &kp ESC         &kp N1  &kp N2   &kp N3            &kp N4        &kp N5          &kp N6      &kp N7     &kp N8     &kp N9   &kp N0    &kp BACKSPACE
-&kp TAB         &kp Q   &kp W    &kp E             &kp R         &kp T           &kp Y       &kp U      &kp I      &kp O    &kp P     &kp BSLH
+&kp TAB         &kp Q   &kp W    &kp E             &kp R         &kp T           &kp Y       &kp U      &kp I      &kp O    &kp P     &kp INS
 &kp CAPSLOCK    &kp A   &lt 4 S  &kp D             &lt 3 F       &kp G           &kp H       &kp J      &kp K      &kp L    &kp SEMI  &kp SQT
 &kp LEFT_SHIFT  &kp Z   &kp X    &kp C             &kp V         &lt 2 B         &kp N       &kp M      &kp COMMA  &kp DOT  &kp FSLH  &kp RIGHT_SHIFT
-                                 &kp LEFT_CONTROL  &kp SPACE     &mo 1           &kp DELETE  &kp SPACE
+                                 &kp LEFT_CONTROL  &mo 5         &mo 1           &kp DELETE  &kp SPACE
                                                    &kp LEFT_WIN  &kp LEFT_ALT    &kp ENTER
             >;
         };
 
         F_layers {
             bindings = <
-&kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &kp F6        &kp F7     &kp F8     &kp F9        &kp F10    &kp F11       &kp F12
-&trans  &none   &none   &none   &none   &trans        &kp GRAVE  &kp LBKT   &kp UP_ARROW  &kp RBKT   &kp MINUS     &kp EQUAL
-&trans  &none   &none   &none   &none   &trans        &mkp LCLK  &kp LEFT   &kp DOWN      &kp RIGHT  &kp PAGE_UP   &kp DEL
-&trans  &trans  &trans  &trans  &trans  &none         &mkp LCLK  &mkp RCLK  &trans        &trans     &kp PAGE_DOWN &kp INS
-                        &trans  &trans  &To0_macro    &mkp LCLK  &mkp RCLK
+&kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &kp F6        &kp F7     &kp F8         &kp F9          &kp F10    &kp F11       &kp F12
+&trans  &none   &none   &none   &none   &trans        &trans     &kp PAGE_DOWN  &kp PAGE_UP     &trans     &trans       &trans
+&trans  &none   &none   &none   &none   &trans        &kp LEFT   &kp DOWN       &kp UP          &kp RIGHT  &trans        &trans
+&trans  &trans  &trans  &trans  &trans  &none         &trans     &trans         &trans          &trans     &trans        &trans
+                        &trans  &trans  &To0_macro    &trans     &trans
                                 &trans  &trans        &trans
             >;
         };
@@ -75,23 +75,34 @@
 
         scroll-layers {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans    &trans  &trans
-                                &trans  &trans    &trans
+&trans  &trans  &trans  &trans  &trans  &trans       &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans       &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans       &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans       &trans  &trans  &trans  &trans  &trans  &trans
+                        &mkp LCLK  &mkp RCLK  &trans    &trans  &trans
+                                &trans  &trans       &trans
             >;
         };
 
         snipe-layers {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans     &trans     &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans     &trans     &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &mkp LCLK  &mkp RCLK  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans     &trans     &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans    &mkp LCLK  &mkp RCLK
-                                &trans  &trans    &trans
+&trans  &trans  &trans  &trans  &trans  &trans       &trans     &trans     &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans       &trans     &trans     &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans       &trans     &trans     &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans       &trans     &trans     &trans  &trans  &trans  &trans
+                &mkp LCLK  &mkp RCLK &trans          &trans     &trans
+                                &trans  &trans       &trans
+            >;
+        };
+
+        symbols {
+            bindings = <
+&trans  &kp EXCL   &kp AT   &kp HASH  &kp DLLR  &kp PRCNT    &kp CARET  &kp AMPS   &kp ASTRK  &kp LPAR   &kp RPAR   &trans
+&trans  &kp GRAVE  &kp LT   &kp GT    &kp PIPE  &kp BSLH     &kp DQT    &kp UNDER  &kp EQUAL  &kp PLUS   &kp COLON  &trans
+&trans  &kp TILDE  &kp LBRC &kp RBRC  &kp AMPS  &kp QMARK    &kp SQT    &kp MINUS  &kp ASTRK  &kp FSLH   &kp SEMI   &trans
+&trans  &trans     &kp LBKT &kp RBKT  &trans    &trans       &trans     &trans     &trans     &trans     &trans     &trans
+                            &trans    &trans    &trans       &trans     &trans
+                                      &trans    &trans       &trans
             >;
         };
     };
