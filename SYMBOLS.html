@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Charybdis Symbols Layer</title>
+    <link rel="stylesheet" href="keymap.css">
+    <style>
+        .layers { grid-template-columns: 1fr; }
+        .layer { max-width: 700px; margin: 0 auto; }
+        .key { width: 56px; height: 38px; font-size: 14px; }
+        .key.trans { font-size: 10px; }
+        .sub { font-size: 9px; }
+        .split-gap { width: 20px; }
+        .keyboard { gap: 3px; }
+        .row { gap: 3px; }
+        .thumb-cluster { gap: 3px; margin-top: 6px; }
+        .thumb-left, .thumb-right { gap: 3px; }
+        .thumb-row { gap: 3px; }
+        h1 { font-size: 18px; margin-bottom: 10px; }
+        .layer-title { font-size: 14px; padding: 5px; margin-bottom: 8px; }
+    </style>
+</head>
+<body>
+<h1>Charybdis Symbols Layer (L5)</h1>
+<div class="layers">
+
+<div class="layer">
+    <div class="layer-title">Hold L5 (left thumb) to access</div>
+    <div class="keyboard">
+        <div class="row">
+            <div class="key trans">▽</div><div class="key">!</div><div class="key">@</div><div class="key">#</div><div class="key">$</div><div class="key">%</div>
+            <div class="split-gap"></div>
+            <div class="key">^</div><div class="key">&amp;</div><div class="key">*</div><div class="key">(</div><div class="key">)</div><div class="key trans">▽</div>
+        </div>
+        <div class="row">
+            <div class="key trans">▽</div><div class="key">`</div><div class="key">&lt;</div><div class="key">&gt;</div><div class="key">|</div><div class="key">\</div>
+            <div class="split-gap"></div>
+            <div class="key">"</div><div class="key">_</div><div class="key">=</div><div class="key">+</div><div class="key">:</div><div class="key trans">▽</div>
+        </div>
+        <div class="row">
+            <div class="key trans">▽</div><div class="key">~</div><div class="key">{</div><div class="key">}</div><div class="key">&amp;</div><div class="key">?</div>
+            <div class="split-gap"></div>
+            <div class="key">'</div><div class="key">-</div><div class="key">*</div><div class="key">/</div><div class="key">;</div><div class="key trans">▽</div>
+        </div>
+        <div class="row">
+            <div class="key trans">▽</div><div class="key trans">▽</div><div class="key">[</div><div class="key">]</div><div class="key trans">▽</div><div class="key trans">▽</div>
+            <div class="split-gap"></div>
+            <div class="key trans">▽</div><div class="key trans">▽</div><div class="key trans">▽</div><div class="key trans">▽</div><div class="key trans">▽</div><div class="key trans">▽</div>
+        </div>
+        <div class="thumb-cluster">
+            <div class="thumb-left">
+                <div class="thumb-row"><div class="key trans">▽</div><div class="key trans">▽</div><div class="key trans">▽</div></div>
+                <div class="thumb-row"><div class="key trans">▽</div><div class="key trans">▽</div></div>
+            </div>
+            <div class="split-gap"></div>
+            <div class="thumb-right">
+                <div class="thumb-row"><div class="key trans">▽</div><div class="key trans">▽</div></div>
+                <div class="thumb-row"><div class="key trans">▽</div></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</div>
+
+<div class="legend">
+    <div class="legend-item"><div class="legend-box" style="background:#fff"></div>Symbol</div>
+    <div class="legend-item"><div class="legend-box" style="background:#fafafa;color:#ccc">▽</div>Transparent (passes to base layer)</div>
+</div>
+
+</body>
+</html>
