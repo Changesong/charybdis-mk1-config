@@ -59,6 +59,9 @@
         cpi = <1200>;
         swap-xy;
         invert-x;
+        evt-type = <INPUT_EV_REL>;
+        x-input-code = <INPUT_REL_X>;
+        y-input-code = <INPUT_REL_Y>;
     };
 };
 
