@@ -5,9 +5,10 @@
 #include <dt-bindings/zmk/rgb.h>
 
 &lt {
-    tapping-term-ms = <200>;
+    tapping-term-ms = <300>;
     flavor = "balanced";
     quick-tap-ms = <150>;
+    require-prior-idle-ms = <125>;
 };
 
 / {
@@ -57,7 +58,7 @@
 &trans  &none   &none   &none   &none   &trans        &trans     &kp PAGE_DOWN  &kp PAGE_UP     &trans     &trans       &trans
 &trans  &none   &none   &none   &none   &trans        &kp LEFT   &kp DOWN       &kp UP          &kp RIGHT  &trans        &trans
 &trans  &trans  &trans  &trans  &trans  &none         &trans     &trans         &trans          &trans     &trans        &trans
-                        &trans  &trans  &To0_macro    &trans     &trans
+                        &trans  &trans  &trans        &trans     &trans
                                 &trans  &trans        &trans
             >;
         };
@@ -79,8 +80,8 @@
 &trans  &trans  &trans  &trans  &trans  &trans       &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans       &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans       &trans  &trans  &trans  &trans  &trans  &trans
-                        &mkp LCLK  &mkp RCLK  &trans    &trans  &trans
-                                &trans  &trans       &trans
+                        &trans  &trans  &trans       &trans  &trans
+                                &mkp LCLK &mkp RCLK  &trans
             >;
         };
 
