@@ -71,10 +71,10 @@
         compatible = "zmk,input-listener";
         device = <&trackball>;
 
-        // Layer 3: Scroll mode - convert XY movement to scroll
+        // Layer 3: Scroll mode - convert XY movement to scroll (1/2 speed)
         scroll_mode {
             layers = <3>;
-            input-processors = <&zip_xy_to_scroll_mapper>;
+            input-processors = <&zip_xy_to_scroll_mapper>, <&zip_scroll_scaler 1 2>;
         };
 
         // Layer 4: Snipe mode - slow pointer (1/2 speed)
