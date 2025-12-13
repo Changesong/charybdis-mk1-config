@@ -4,11 +4,12 @@
 
 | Layer | Name         | Purpose                        | Access Method                     |
 |-------|--------------|--------------------------------|-----------------------------------|
-| 0     | QWERTY       | Default typing layer           | Default / `To0_macro`             |
-| 1     | F_layers     | Function keys & navigation     | Hold right thumb `mo 1`           |
-| 2     | BT_layers    | Bluetooth controls             | Hold `B` key / `To2_macro`        |
+| 0     | QWERTY       | Default typing layer           | Default                           |
+| 1     | F_layers     | Function keys & navigation     | Hold left thumb `mo 1`            |
+| 2     | BT_layers    | Bluetooth controls             | Hold `B` key                      |
 | 3     | scroll-layers| Trackball scroll mode          | Hold `F` key                      |
 | 4     | snipe-layers | Trackball precision/snipe mode | Hold `S` key                      |
+| 5     | symbols      | Programming symbols            | Hold left thumb `mo 5`            |
 
 ---
 
@@ -23,10 +24,11 @@ These keys act as normal keys when tapped, but activate a layer when held:
 | `F`          | Types F| Activates Layer 3 (scroll)|
 | `B`          | Types B| Activates Layer 2 (BT)    |
 
-### Momentary Layer Key
+### Momentary Layer Keys
 | Key Position       | Action                      |
 |--------------------|-----------------------------|
-| Right thumb (mo 1) | Hold to activate F_layers   |
+| Left thumb (mo 1)  | Hold to activate F_layers   |
+| Left thumb (mo 5)  | Hold to activate Symbols    |
 
 ---
 
@@ -36,14 +38,14 @@ These keys act as normal keys when tapped, but activate a layer when held:
 ┌───────┬─────┬─────┬─────┬─────┬─────┐       ┌─────┬─────┬─────┬─────┬─────┬─────────┐
 │  ESC  │  1  │  2  │  3  │  4  │  5  │       │  6  │  7  │  8  │  9  │  0  │ BKSPACE │
 ├───────┼─────┼─────┼─────┼─────┼─────┤       ├─────┼─────┼─────┼─────┼─────┼─────────┤
-│  TAB  │  Q  │  W  │  E  │  R  │  T  │       │  Y  │  U  │  I  │  O  │  P  │    \    │
+│  TAB  │  Q  │  W  │  E  │  R  │  T  │       │  Y  │  U  │  I  │  O  │  P  │   INS   │
 ├───────┼─────┼─────┼─────┼─────┼─────┤       ├─────┼─────┼─────┼─────┼─────┼─────────┤
 │ CAPS  │  A  │ S/L4│  D  │ F/L3│  G  │       │  H  │  J  │  K  │  L  │  ;  │    '    │
 ├───────┼─────┼─────┼─────┼─────┼─────┤       ├─────┼─────┼─────┼─────┼─────┼─────────┤
 │ SHIFT │  Z  │  X  │  C  │  V  │ B/L2│       │  N  │  M  │  ,  │  .  │  /  │  SHIFT  │
 └───────┴─────┴─────┴─────┴─────┴─────┘       └─────┴─────┴─────┴─────┴─────┴─────────┘
                     ┌─────┬─────┬─────┐       ┌─────┬─────┐
-                    │CTRL │SPACE│ mo1 │       │ DEL │SPACE│  (Right side has trackball)
+                    │CTRL │ mo5 │ mo1 │       │ DEL │SPACE│  (Right side has trackball)
                     └─────┴─────┴─────┘       └─────┴─────┘
                           ┌─────┬─────┐       ┌─────┐
                           │ WIN │ ALT │       │ENTER│
@@ -56,35 +58,33 @@ These keys act as normal keys when tapped, but activate a layer when held:
 
 ## Layer 1: F_layers (Function & Navigation)
 
-Activated by holding right thumb key (`mo 1`).
+Activated by holding left thumb key (`mo 1`).
 
 ```
 ┌─────┬─────┬─────┬─────┬─────┬─────┐       ┌─────┬─────┬─────┬─────┬─────┬─────┐
 │ F1  │ F2  │ F3  │ F4  │ F5  │ F6  │       │ F7  │ F8  │ F9  │ F10 │ F11 │ F12 │
 ├─────┼─────┼─────┼─────┼─────┼─────┤       ├─────┼─────┼─────┼─────┼─────┼─────┤
-│     │     │     │     │     │     │       │  `  │  [  │  UP │  ]  │  -  │  =  │
+│     │     │     │     │     │     │       │     │PgDn │PgUp │     │     │     │
 ├─────┼─────┼─────┼─────┼─────┼─────┤       ├─────┼─────┼─────┼─────┼─────┼─────┤
-│     │     │     │     │     │     │       │LCLK │LEFT │DOWN │RIGHT│PGUP │ DEL │
+│     │     │     │     │     │     │       │LEFT │DOWN │ UP  │RIGHT│     │     │
 ├─────┼─────┼─────┼─────┼─────┼─────┤       ├─────┼─────┼─────┼─────┼─────┼─────┤
-│     │     │     │     │     │     │       │LCLK │RCLK │     │     │PGDN │ INS │
+│     │     │     │     │     │     │       │     │     │     │     │     │     │
 └─────┴─────┴─────┴─────┴─────┴─────┘       └─────┴─────┴─────┴─────┴─────┴─────┘
                     ┌─────┬─────┬─────┐       ┌─────┬─────┐
-                    │     │     │ TO0 │       │LCLK │RCLK │
+                    │     │     │     │       │     │     │
                     └─────┴─────┴─────┘       └─────┴─────┘
 ```
 
 **Key features:**
 - Full F1-F12 row
-- Arrow keys on right hand (IJKL-style, but actually on UIO and JKL)
-- Brackets `[ ]`, grave `` ` ``, minus `-`, equals `=`
-- Page Up/Down, Delete, Insert
-- Mouse clicks available on trackball side
+- Arrow keys on HJKL (vim-style)
+- Page Up/Down on U/I
 
 ---
 
 ## Layer 2: BT_layers (Bluetooth)
 
-Activated by holding `B` key or via `To2_macro`.
+Activated by holding `B` key.
 
 ```
 ┌─────┬─────┬─────┬─────┬─────┬─────┐       ┌─────┬─────┬─────┬─────┬─────┬─────┐
@@ -110,7 +110,12 @@ Activated by holding `B` key or via `To2_macro`.
 
 Activated by holding `F` key. Enables trackball scroll mode.
 
-All keys transparent (pass through to layer below).
+All keys transparent (pass through to layer below) except:
+```
+                    ┌─────┬─────┐
+Thumb cluster:      │LCLK │RCLK │  (on Win/Alt positions)
+                    └─────┴─────┘
+```
 
 ---
 
@@ -118,24 +123,38 @@ All keys transparent (pass through to layer below).
 
 Activated by holding `S` key. Enables precision/snipe trackball mode.
 
+All keys transparent (pass through to layer below) except:
 ```
-                                            ┌─────┬─────┐
-Right hand home row has mouse clicks:       │LCLK │RCLK │ (on H, J positions)
-                                            └─────┴─────┘
                     ┌─────┬─────┐
-Thumb cluster:      │LCLK │RCLK │
+Thumb cluster:      │LCLK │RCLK │  (on Win/Alt positions)
                     └─────┴─────┘
 ```
 
 ---
 
-## RGB Macros
+## Layer 5: Symbols
 
-| Macro       | Action                                              |
-|-------------|-----------------------------------------------------|
-| `To0_macro` | Return to Layer 0, restore RGB effect               |
-| `To1_macro` | Go to Layer 1, set RGB to cyan (HSB 128,100,50)     |
-| `To2_macro` | Go to Layer 2, set RGB to magenta (HSB 250,100,50)  |
+Activated by holding left thumb key (`mo 5`).
+
+```
+┌─────┬─────┬─────┬─────┬─────┬─────┐       ┌─────┬─────┬─────┬─────┬─────┬─────┐
+│     │  !  │  @  │  #  │  $  │  %  │       │  ^  │  &  │  *  │  (  │  )  │     │
+├─────┼─────┼─────┼─────┼─────┼─────┤       ├─────┼─────┼─────┼─────┼─────┼─────┤
+│     │  `  │  <  │  >  │  |  │  \  │       │  "  │  +  │  /  │  _  │  :  │     │
+├─────┼─────┼─────┼─────┼─────┼─────┤       ├─────┼─────┼─────┼─────┼─────┼─────┤
+│     │  ~  │  {  │  }  │  &  │  ?  │       │  '  │  -  │  *  │  =  │  ;  │     │
+├─────┼─────┼─────┼─────┼─────┼─────┤       ├─────┼─────┼─────┼─────┼─────┼─────┤
+│     │     │  [  │  ]  │     │     │       │     │     │     │     │     │     │
+└─────┴─────┴─────┴─────┴─────┴─────┘       └─────┴─────┴─────┴─────┴─────┴─────┘
+```
+
+**Key features:**
+- Shifted number row symbols (!@#$%^&*())
+- Brackets and braces: `[ ] { } < >`
+- Common programming symbols organized for easy access
+- Quote characters: `` ` `` `"` `'`
+- Operators: `+ - * / = | \ & ? : ;`
+- Underscore and tilde for identifiers
 
 ---
 
@@ -143,7 +162,8 @@ Thumb cluster:      │LCLK │RCLK │
 
 ```
 Tap-hold timing (layer-tap keys):
-- Tapping term: 200ms (hold threshold)
+- Tapping term: 300ms (hold threshold)
 - Quick-tap: 150ms (for rapid repeated taps)
+- Require prior idle: 125ms
 - Flavor: balanced
 ```
