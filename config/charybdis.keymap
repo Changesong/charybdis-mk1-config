@@ -18,9 +18,9 @@
             bindings = <
 &kp ESC         &kp N1  &kp N2   &kp N3            &kp N4        &kp N5          &kp N6      &kp N7     &kp N8     &kp N9   &kp N0    &kp BACKSPACE
 &kp TAB         &kp Q   &kp W    &kp E             &kp R         &kp T           &kp Y       &kp U      &kp I      &kp O    &kp P     &kp INS
-&kp CAPSLOCK    &kp A   &lt 4 S  &kp D             &lt 3 F       &kp G           &kp H       &kp J      &kp K      &kp L    &kp SEMI  &kp SQT
-&kp LEFT_SHIFT  &kp Z   &kp X    &kp C             &kp V         &lt 2 B         &kp N       &kp M      &kp COMMA  &kp DOT  &kp FSLH  &kp RIGHT_SHIFT
-                                 &kp LEFT_CONTROL  &mo 5         &mo 1           &kp DELETE  &kp SPACE
+&kp LEFT_SHIFT  &kp A   &lt 4 S  &kp D             &lt 3 F       &kp G           &kp H       &kp J      &kp K      &kp L    &kp SEMI  &kp SQT
+&kp LEFT_CONTROL &kp Z  &kp X    &kp C             &kp V         &lt 2 B         &kp N       &kp M      &kp COMMA  &kp DOT  &kp FSLH  &kp RIGHT_ALT
+                                 &kp LEFT_SHIFT    &mo 5         &mo 1           &kp DELETE  &kp SPACE
                                                    &kp LEFT_WIN  &kp LEFT_ALT    &kp ENTER
             >;
         };
@@ -74,7 +74,7 @@
 &trans  &kp EXCL   &kp AT   &kp HASH  &kp DLLR  &kp PRCNT    &kp CARET  &kp AMPS   &kp ASTRK  &kp LPAR   &kp RPAR   &trans
 &trans  &kp GRAVE  &kp LT   &kp GT    &kp PIPE  &kp BSLH     &kp DQT    &kp PLUS   &kp FSLH   &kp UNDER  &kp COLON  &trans
 &trans  &kp TILDE  &kp LBRC &kp RBRC  &kp AMPS  &kp QMARK    &kp SQT    &kp MINUS  &kp ASTRK  &kp EQUAL  &kp SEMI   &trans
-&trans  &trans     &kp LBKT &kp RBKT  &trans    &trans       &trans     &trans     &trans     &trans     &trans     &trans
+&trans  &trans     &kp LPAR &kp RPAR  &kp LBKT  &kp RBKT       &trans     &trans     &trans     &trans     &trans     &trans
                             &trans    &trans    &trans       &trans     &trans
                                       &trans    &trans       &trans
             >;
