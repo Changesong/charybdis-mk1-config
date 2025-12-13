@@ -7,4 +7,3 @@
 4. Drag the fw file onto the drive.
 5. Repeat for the right half.
 6. Power both keyboards on.
-7. Re-pair bluetooth if needed.
