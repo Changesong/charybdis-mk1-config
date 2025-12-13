@@ -2,6 +2,7 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/pointing.h>
+#include <dt-bindings/zmk/input_transform.h>
 
 &lt {
     tapping-term-ms = <300>;
@@ -78,6 +79,23 @@
                             &trans    &trans    &trans       &trans     &trans
                                       &trans    &trans       &trans
             >;
+        };
+    };
+
+    trackball_listener {
+        compatible = "zmk,input-listener";
+        device = <&trackball>;
+
+        // Layer 3: Scroll mode - convert XY movement to scroll
+        scroll_mode {
+            layers = <3>;
+            input-processors = <&zip_xy_to_scroll_mapper>;
+        };
+
+        // Layer 4: Snipe mode - slow pointer (1/6 speed, ~200 CPI equivalent)
+        snipe_mode {
+            layers = <4>;
+            input-processors = <&zip_xy_scaler 1 6>;
         };
     };
 };
