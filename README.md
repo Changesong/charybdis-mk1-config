@@ -1,6 +1,6 @@
 # ZMK-config for charybdis (4x6)
 
-## Instructions
+## Instructions for normal keymap updates
 1. Turn both keyboards off
 2. Connect USB cable to the left hand keyboard.
 3. Double tap the reset button. Proceed when you see a "NiceNano" device pop up in your PC's devices.
