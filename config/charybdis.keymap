@@ -28,7 +28,7 @@
         F_layers {
             bindings = <
 &kp F12    &kp F1  &kp F2    &kp F3    &kp F4     &kp F5      &kp F6    &kp F7   &kp F8    &kp F9     &kp F10    &kp F11
-&kp GRAVE  &none   &none     &kp UP    &none      &kp LBKT    &kp RBKT  &kp INS  &kp HOME  &kp PG_UP  &kp PSCRN  &none
+&kp GRAVE  &none   &none     &kp UP    &none      &kp LBKT    &kp RBKT  &kp INS  &kp HOME  &kp PG_UP  &kp PSCRN  &kp EQUAL
 &trans     &none   &kp LEFT  &kp DOWN  &kp RIGHT  &none       &none     &kp DEL  &kp END   &kp PG_DN  &none      &trans
 &trans     &none   &none     &none     &none      &none       &none     &none    &none     &none      &none      &trans
                              &trans    &trans     &trans      &trans    &trans
