@@ -14,69 +14,47 @@
     keymap {
         compatible = "zmk,keymap";
 
-        QWERTY {
+        Base {
             bindings = <
-&kp ESC         &kp N1  &kp N2   &kp N3            &kp N4        &kp N5          &kp N6      &kp N7     &kp N8     &kp N9   &kp N0    &kp BACKSPACE
-&kp TAB         &kp Q   &kp W    &kp E             &kp R         &kp T           &kp Y       &kp U      &kp I      &kp O    &kp P     &kp INS
-&kp LEFT_SHIFT  &kp A   &lt 4 S  &kp D             &lt 3 F       &kp G           &kp H       &kp J      &kp K      &kp L    &kp SEMI  &kp SQT
-&kp LEFT_CONTROL &kp Z  &kp X    &kp C             &kp V         &lt 2 B         &kp N       &kp M      &kp COMMA  &kp DOT  &kp FSLH  &kp RIGHT_ALT
-                                 &kp LEFT_SHIFT    &mo 5         &mo 1           &kp DELETE  &kp SPACE
-                                                   &kp LEFT_WIN  &kp LEFT_ALT    &kp ENTER
+&kp ESC         &kp N1  &kp N2  &kp N3    &kp N4     &kp N5          &kp N6       &kp N7     &kp N8     &kp N9   &kp N0    &kp MINUS
+&kp TAB         &kp Q   &kp W   &kp E     &kp R      &kp T           &kp Y        &kp U      &kp I      &kp O    &kp P     &kp BSLH
+&kp LCTRL       &kp A   &kp S   &kp D     &kp F      &kp G           &kp H        &kp J      &kp K      &kp L    &kp SEMI  &kp SQT
+&kp LEFT_SHIFT  &kp Z   &kp X   &kp C     &kp V      &kp B           &kp N        &kp M      &kp COMMA  &kp DOT  &kp FSLH  &tog 2
+                                &kp LALT  &kp ENTER  &kp LEFT_GUI    &lt 1 LANG1  &kp SPACE
+                                          &mo 1      &kp LEFT_ALT    &kp BSPC
             >;
         };
 
         F_layers {
             bindings = <
-&kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &kp F6        &kp F7     &kp F8         &kp F9          &kp F10    &kp F11       &kp F12
-&trans  &none   &none   &none   &none   &trans        &trans     &kp PAGE_DOWN  &kp PAGE_UP     &trans     &trans       &trans
-&trans  &none   &none   &none   &none   &trans        &kp LEFT   &kp DOWN       &kp UP          &kp RIGHT  &trans        &trans
-&trans  &trans  &trans  &trans  &trans  &none         &trans     &trans         &trans          &trans     &trans        &trans
-                        &trans  &trans  &trans        &trans     &trans
-                                &trans  &trans        &trans
+&kp F12    &kp F1  &kp F2    &kp F3    &kp F4     &kp F5      &kp F6    &kp F7   &kp F8    &kp F9     &kp F10    &kp F11
+&kp GRAVE  &none   &none     &kp UP    &none      &kp LBKT    &kp RBKT  &kp INS  &kp HOME  &kp PG_UP  &kp PSCRN  &none
+&trans     &none   &kp LEFT  &kp DOWN  &kp RIGHT  &none       &none     &kp DEL  &kp END   &kp PG_DN  &none      &trans
+&trans     &none   &none     &none     &none      &none       &none     &none    &none     &none      &none      &trans
+                             &trans    &trans     &trans      &trans    &trans
+                                       &trans     &trans      &kp DEL
             >;
         };
 
-        BT_layers {
+        Mouse_move {
             bindings = <
-&trans  &bt BT_SEL 0    &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &trans      &trans  &trans  &trans  &trans  &trans
-&trans  &trans          &trans        &trans        &trans        &trans          &trans      &trans  &trans  &trans  &trans  &trans
-&trans  &bt BT_CLR_ALL  &trans        &trans        &trans        &trans          &trans      &trans  &trans  &trans  &trans  &trans
-&trans  &trans          &trans        &bt BT_CLR    &trans        &trans          &bt BT_NXT  &trans  &trans  &trans  &trans  &trans
-                                      &trans        &trans        &trans          &trans      &trans
-                                                    &trans        &trans          &trans
+&trans  &bt BT_SEL 0    &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &trans  &trans     &trans     &trans     &trans  &trans
+&trans  &trans          &trans        &trans        &trans        &trans          &trans  &trans     &trans     &trans     &trans  &trans
+&trans  &bt BT_CLR_ALL  &trans        &trans        &trans        &trans          &trans  &trans     &mkp MCLK  &trans     &trans  &trans
+&trans  &trans          &trans        &bt BT_CLR    &trans        &trans          &trans  &mkp LCLK  &mo 3      &mkp RCLK  &trans  &trans
+                                      &trans        &trans        &trans          &trans  &trans
+                                                    &mkp LCLK     &mkp RCLK       &trans
             >;
         };
 
-        scroll-layers {
+        Mouse_scroll {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans       &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans       &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans       &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans       &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans       &trans  &trans
-                                &mkp LCLK &mkp RCLK  &trans
-            >;
-        };
-
-        snipe-layers {
-            bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans       &trans     &trans     &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans       &trans     &trans     &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans       &trans     &trans     &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans       &trans     &trans     &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans       &trans     &trans
-                                &mkp LCLK &mkp RCLK  &trans
-            >;
-        };
-
-        symbols {
-            bindings = <
-&trans  &kp EXCL   &kp AT   &kp HASH  &kp DLLR  &kp PRCNT    &kp CARET  &kp AMPS   &kp ASTRK  &kp LPAR   &kp RPAR   &trans
-&trans  &kp GRAVE  &kp LT   &kp GT    &kp PIPE  &kp BSLH     &kp DQT    &kp PLUS   &kp FSLH   &kp UNDER  &kp COLON  &trans
-&trans  &kp TILDE  &kp LBRC &kp RBRC  &kp AMPS  &kp QMARK    &kp SQT    &kp MINUS  &kp ASTRK  &kp EQUAL  &kp SEMI   &trans
-&trans  &trans     &kp LPAR &kp RPAR  &kp LBKT  &kp RBKT       &trans     &trans     &trans     &trans     &trans     &trans
-                            &trans    &trans    &trans       &trans     &trans
-                                      &trans    &trans       &trans
+&trans  &trans  &trans  &trans  &trans     &trans       &trans  &trans     &trans     &trans     &trans  &trans
+&trans  &trans  &trans  &trans  &trans     &trans       &trans  &trans     &trans     &trans     &trans  &trans
+&trans  &trans  &trans  &trans  &trans     &trans       &trans  &trans     &mkp MCLK  &trans     &trans  &trans
+&trans  &trans  &trans  &trans  &trans     &trans       &trans  &mkp LCLK  &trans     &mkp RCLK  &trans  &trans
+                        &trans  &trans     &trans       &trans  &trans
+                                &mkp LCLK  &mkp RCLK    &trans
             >;
         };
     };
