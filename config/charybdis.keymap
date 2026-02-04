@@ -16,34 +16,34 @@
 
         Base {
             bindings = <
-&kp ESC         &kp N1  &kp N2  &kp N3    &kp N4     &kp N5          &kp N6       &kp N7     &kp N8     &kp N9   &kp N0    &kp MINUS
-&kp TAB         &kp Q   &kp W   &kp E     &kp R      &kp T           &kp Y        &kp U      &kp I      &kp O    &kp P     &kp BSLH
-&kp LCTRL       &kp A   &kp S   &kp D     &kp F      &kp G           &kp H        &kp J      &kp K      &kp L    &kp SEMI  &kp SQT
-&kp LEFT_SHIFT  &kp Z   &kp X   &kp C     &kp V      &kp B           &kp N        &kp M      &kp COMMA  &kp DOT  &kp FSLH  &tog 2
-                                &kp LALT  &kp ENTER  &kp LEFT_GUI    &lt 1 LANG1  &kp SPACE
-                                          &mo 1      &kp LEFT_ALT    &kp BSPC
+&kp ESC    &kp N1  &kp N2  &kp N3     &kp N4     &kp N5          &kp N6            &kp N7     &kp N8     &kp N9   &kp N0    &kp MINUS
+&kp TAB    &kp Q   &kp W   &kp E      &kp R      &kp T           &kp Y             &kp U      &kp I      &kp O    &kp P     &kp BSLH
+&kp LCTRL  &kp A   &kp S   &kp D      &kp F      &kp G           &kp H             &kp J      &kp K      &kp L    &kp SEMI  &kp SQT
+&kp LALT   &kp Z   &kp X   &kp C      &kp V      &kp B           &kp N             &kp M      &kp COMMA  &kp DOT  &kp FSLH  &tog 2
+                           &kp LSHFT  &kp ENTER  &kp LEFT_GUI    &kp BSPC          &kp SPACE
+                                      &mo 1      &mo 2           &lt 1 LANGUAGE_1
             >;
         };
 
         F_layers {
             bindings = <
-&kp F12    &kp F1  &kp F2    &kp F3    &kp F4     &kp F5      &kp F6    &kp F7   &kp F8    &kp F9     &kp F10    &kp F11
-&kp GRAVE  &none   &none     &kp UP    &none      &kp LBKT    &kp RBKT  &kp INS  &kp HOME  &kp PG_UP  &kp PSCRN  &kp EQUAL
-&trans     &none   &kp LEFT  &kp DOWN  &kp RIGHT  &none       &none     &kp DEL  &kp END   &kp PG_DN  &none      &trans
-&trans     &none   &none     &none     &none      &none       &none     &none    &none     &none      &none      &trans
-                             &trans    &trans     &trans      &trans    &trans
-                                       &trans     &trans      &kp DEL
+&kp F12    &kp F1  &kp F2    &kp F3    &kp F4     &kp F5       &kp F6    &kp F7   &kp F8    &kp F9     &kp F10    &kp F11
+&kp GRAVE  &none   &none     &kp UP    &none      &kp LBKT     &kp RBKT  &kp INS  &kp HOME  &kp PG_UP  &kp PSCRN  &kp EQUAL
+&trans     &none   &kp LEFT  &kp DOWN  &kp RIGHT  &none        &none     &kp DEL  &kp END   &kp PG_DN  &none      &trans
+&trans     &none   &none     &none     &none      &none        &none     &none    &none     &none      &none      &trans
+                             &trans    &trans     &kp LANG2    &kp DEL   &trans
+                                       &trans     &trans       &kp DEL
             >;
         };
 
         Mouse_move {
             bindings = <
-&trans  &bt BT_SEL 0    &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &trans  &trans     &trans     &trans     &trans  &trans
-&trans  &trans          &trans        &trans        &trans        &trans          &trans  &trans     &trans     &trans     &trans  &trans
-&trans  &bt BT_CLR_ALL  &trans        &trans        &trans        &trans          &trans  &trans     &mkp MCLK  &trans     &trans  &trans
-&trans  &trans          &trans        &bt BT_CLR    &trans        &trans          &trans  &mkp LCLK  &mo 3      &mkp RCLK  &trans  &trans
-                                      &trans        &trans        &trans          &trans  &trans
-                                                    &mkp LCLK     &mkp RCLK       &trans
+&mo 4   &trans  &trans  &trans  &trans     &trans       &trans  &trans     &trans     &trans     &trans  &trans
+&trans  &trans  &trans  &trans  &trans     &trans       &trans  &trans     &trans     &trans     &trans  &trans
+&trans  &trans  &trans  &trans  &trans     &trans       &trans  &trans     &mkp MCLK  &trans     &trans  &trans
+&trans  &trans  &trans  &trans  &trans     &trans       &trans  &mkp LCLK  &mo 3      &mkp RCLK  &trans  &trans
+                        &trans  &trans     &trans       &trans  &trans
+                                &mkp LCLK  &mkp RCLK    &trans
             >;
         };
 
@@ -55,6 +55,17 @@
 &trans  &trans  &trans  &trans  &trans     &trans       &trans  &mkp LCLK  &trans     &mkp RCLK  &trans  &trans
                         &trans  &trans     &trans       &trans  &trans
                                 &mkp LCLK  &mkp RCLK    &trans
+            >;
+        };
+
+        layer_4 {
+            bindings = <
+&trans  &bt BT_SEL 0    &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans          &trans        &trans        &trans        &trans          &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &bt BT_CLR_ALL  &trans        &trans        &trans        &trans          &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans          &trans        &bt BT_CLR    &trans        &trans          &trans  &trans  &trans  &trans  &trans  &trans
+                                      &trans        &trans        &trans          &trans  &trans
+                                                    &trans        &trans          &trans
             >;
         };
     };
