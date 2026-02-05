@@ -33,7 +33,7 @@
 &kp LCTRL       &kp A   &kp S   &kp D     &kp F      &kp G           &kp H             &kp J      &kp K      &kp L    &kp SEMI  &kp SQT
 &kp LEFT_SHIFT  &kp Z   &kp X   &kp C     &kp V      &kp B           &kp N             &kp M      &kp COMMA  &kp DOT  &kp FSLH  &tog_hold RIGHT_SHIFT 2
                                 &kp LALT  &kp ENTER  &kp LEFT_GUI    &kp BSPC          &kp SPACE
-                                          &sl 3      &sl 1           &lt 1 LANGUAGE_1
+                                          &mo 3      &sl 1           &lt 1 LANGUAGE_1
             >;
         };
 
