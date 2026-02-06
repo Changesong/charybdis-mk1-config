@@ -61,12 +61,12 @@
 
         Mouse_scroll {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans     &trans     &trans     &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans     &trans     &trans     &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &mkp MB4   &mkp MCLK  &mkp MB5   &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &mkp LCLK  &trans     &mkp RCLK  &trans  &trans
-                        &trans  &trans  &trans    &trans  &trans
-                                &trans  &trans    &trans
+&trans  &trans  &trans    &trans    &trans     &trans    &trans  &trans     &trans     &trans     &trans  &trans
+&trans  &trans  &trans    &kp UP    &trans     &trans    &trans  &trans     &trans     &trans     &trans  &trans
+&trans  &trans  &kp LEFT  &kp DOWN  &kp RIGHT  &trans    &trans  &mkp MB4   &mkp MCLK  &mkp MB5   &trans  &trans
+&trans  &trans  &trans    &trans    &trans     &trans    &trans  &mkp LCLK  &trans     &mkp RCLK  &trans  &trans
+                          &trans    &trans     &trans    &trans  &trans
+                                    &trans     &trans    &trans
             >;
         };
 
